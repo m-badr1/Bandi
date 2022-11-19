@@ -1,0 +1,838 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Chivo', sans-serif;
+}
+/* scroll///////////////////////////////////////////////////////////// */
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: white ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #19283f;
+    border-radius: 10px;
+}
+/* ::-webkit-scrollbar-thumb:hover{
+    background-color: white;
+} */
+/* #center///////////////////////////////////////////////////////// */
+#center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+/* title//////////////////////////////////////////////////////////// */
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title img{
+    width: 100px;
+}
+.title h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.title p{
+    color: rgba(0, 0, 0, 0.536);
+}
+/* button//////////////////////////////////////////// */
+.button-2{
+    margin-top: 30px;
+    padding: 15px 25px;
+    background-color: #ff3150;
+    border: transparent;
+    border-radius: 40px;
+    font-size: 20px ;
+    color: white;
+    cursor: pointer;
+}
+.button-2:hover{
+    background-color: #f51c3d;
+}
+/* nav//////////////////////////////////////////////////////////////// */
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color:#19283f ;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+nav .center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+nav .link-rghit{
+    width:35%;
+}
+nav .link-rghit .ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav .link-rghit ul li{
+    list-style: none;
+}
+nav .link-rghit ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 20px;
+}
+nav .link-rghit ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all  ease-in-out .3s;
+    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 2px;
+}
+nav .link-rghit ul li a:hover::after{
+    width: 100%;
+}
+nav .link-rghit .responsev{
+    display: none;
+}
+nav .link-rghit .responsev i{
+    color: white;
+    font-size: 30px;
+    border: 1px solid;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+nav .link-rghit .responsev i:hover{
+    box-shadow: 0px 0px 30px 0px #33d1cc;
+    color: #33d1cc;
+    cursor: pointer;
+}
+nav .link-rghit .responsev ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    background-color: #19283f;
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all .3s;
+    border-top: 1px solid white;
+}
+nav .link-rghit .responsev:hover .link{
+    height: 300px;
+}
+nav .link-rghit .responsev ul li{
+    padding: 10px 0;
+}
+nav .link-rghit .responsev ul li a{
+    color: white;
+    font-size: 30px;
+}
+/* Mobile */
+@media (max-width:767px){
+    nav .link-rghit{
+        display: flex;
+        justify-content: right;
+    }
+    nav .link-rghit .ul{
+        display: none;
+    }
+    nav .link-rghit .responsev{
+        display: block;
+    }
+}
+
+/* Smali Screens */
+@media (min-width:768px){
+    nav .link-rghit{
+        width:55%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:970px){
+    nav .link-rghit{
+        width:45%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    nav .link-rghit{
+        width:35%;
+    }
+}
+
+/* Header ///////////////////////////////////////////////////////////////*/
+header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #19283f;
+}
+header .box-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+header .box-center h2{
+    margin-bottom: 20px;
+}
+header .box-center button{
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: white;
+    transition: all .5s;
+}
+header .box-center button:hover{
+    background-color: white;
+    color: #19283f;
+}
+/* features ///////////////////////////////////////////////////////////*/
+#features{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+#features #center{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#features #center .card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#features #center .card i{
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #19283f;
+}
+#features #center .card p{
+    font-size: 20px;
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.747);
+}
+/* Mobile */
+@media (max-width:767px){
+    #features #center .card{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #features #center .card{
+        width: 50%;
+        padding-bottom: 50px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:1070px){
+    #features #center .card{
+        width: 30%;
+        padding-bottom: 50px;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    nav .link-rghit{
+        width:35%;
+    }
+}
+
+/* our-work ///////////////////////////////////////////////////////////*/
+#our-work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    background-color: #eff7fa;
+}
+#our-work .title .links{
+    margin-top: 60px;
+}
+#our-work .title .links button{
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+#our-work .title .links .buton{
+    background-color: #ff3150;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 4px;
+}
+#our-work .title .links .buton:hover{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: black;
+}
+#our-work .title .links button:hover{
+    color: #19283f;
+    background-color: #ff3150;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 4px;
+}
+#our-work #center{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#our-work #center .box-img{
+    /* width: 23%; */
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+#our-work #center .box-img::after{
+    content: "Application";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #ff315059;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    visibility: hidden;
+    transition: all .5s;
+}
+#our-work #center .box-img:hover:after {
+    width: 100%;
+    visibility: visible;
+
+}
+#our-work #center .box-img img{
+    width: 100%;
+    height: 100%;
+}
+/* Mobile */
+@media (max-width:767px){
+    #our-work #center .box-img{
+        width: calc(100%  );
+        margin-bottom: 25px;
+    }
+    #our-work .title .links button{  
+        padding: 10px 8px;
+    }
+    #our-work .title .links button:hover{
+        padding: 10px 8px;
+    }
+    #our-work .title .links .buton{
+        padding: 10px 8px;
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #our-work #center .box-img{
+        width: 30%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:1070px){
+    #our-work #center .box-img{
+        width: calc(25% - 20px);
+    }
+}
+/* stuff////////////////////////////////////////////////////// */
+#stuff{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#stuff .title{
+    width: 60%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#stuff .title span{
+    color: rgba(0, 0, 0, 0.637);
+    margin-bottom: 20px;
+
+}
+#stuff #center{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#stuff #center .box-left{
+    width: 50%;
+}
+#stuff #center .box-left p{
+    margin: 20px 0;
+}
+#stuff #center .box-right{
+    width: 50%;
+    padding-top: 40px;
+    transition: all .3s;
+}
+#stuff #center .box-right:hover{
+    transform: translate(10px);
+}
+#stuff #center .box-right img{
+    width: 100%;
+}
+@media (max-width:767px){
+    #stuff .title{
+        width: calc(100% - 20px);
+    }
+    #stuff #center .box-left{
+        width: 100%;
+    }
+    #stuff #center .box-right{
+        width: calc(100% - 20px);
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #stuff .title{
+        width: 60%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:1070px){
+    #stuff .title{
+        width: 40%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    nav .link-rghit{
+        width:35%;
+    }
+}
+/* team//////////////////////////////////////////////////////// */
+#team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color:#eff7fa ;
+}
+#team .title{
+    margin: 50px 0;
+    text-align: center;
+}
+#team #center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#team #center .card{
+    border-left: 15px solid white;
+    border-right: 15px solid white;
+    margin-bottom: 30px;
+}
+#team #center .card .img-top{
+    width: 100%;
+    overflow: hidden;
+    transition: all .2s;
+}
+#team #center .card .img-top img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all .2s;
+
+}
+#team #center .card .img-top img:hover{
+    transform: scale(1.2);
+    transition: all .2s;
+
+}
+#team #center .card .h2-center{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #19283f;
+    color: white;
+}
+#team #center .card .p-bottom{
+    width: 100%;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.823);
+    background-color: white;
+    font-size: 18px;
+}
+@media (max-width:767px){
+    #team .title{
+        width: calc(90%);
+    }
+    #team #center .card{
+        width: 100%;
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #team .title{
+        width: 60%;
+    }
+    #team #center .card{
+        width: 50%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:970px){
+    #team .title{
+        width: 40%;
+    }
+    #team #center .card{
+        width: 30%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    #team #center .card{
+        width: calc(25% - 20px);
+    }
+}
+/* techs///////////////////////////////////////////////////// */
+#techs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px 110px 0;
+}
+
+@media (max-width:767px){
+    #techs .box-img{
+        width: 50%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #techs .box-img img{
+        width: 50%;
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #techs .box-img{
+        width: 30%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #techs .box-img img{
+        width: 50%;
+    }
+}
+
+/* Medium Screens */
+@media (min-width:970px){
+    #techs .box-img{
+        width: 16%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #techs .box-img img{
+        width: 50%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    #team #center .card{
+        width: calc(25% - 20px);
+    }
+}
+/* Project/////////////////////////////////////////////////////// */
+#Project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #19283f;
+    padding: 150px 20px;
+    color: white;
+    text-align: center;
+}
+#Project h2{
+    margin-bottom: 20px;
+}
+/* blog////////////////////////////////////////////////////////////// */
+#blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+#blog #center{
+    padding-top: 60px;
+}
+#blog #center .card{
+    width: calc(30% - 30px);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.234);
+    border-radius: 8px;
+}
+#blog #center .card .img-top{
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+#blog #center .card .img-top img{
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: all .2s;
+    vertical-align: middle;
+    transform: scale(1.2);
+    transition: all .2s;
+}
+#blog #center .card .img-top img:hover{
+    transform: scale( 1);
+}
+#blog #center .card .title-bottom{
+    padding: 20px 0 20px 20px;
+}
+#blog #center .card .title-bottom h2{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.623);
+}
+@media (max-width:767px){
+    #blog #center .card{
+        width: 100%;
+    }
+}
+/* Smali Screens */
+@media (min-width:768px){
+    #blog #center .card{
+        width: calc(34% - 30px);
+    }
+    
+
+}
+
+/* Medium Screens */
+@media (min-width:970px){
+    #techs .box-img{
+        width: 16%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #techs .box-img img{
+        width: 50%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    #team #center .card{
+        width: calc(25% - 20px);
+    }
+}
+
+/* Subscribe///////////////////////////////////////////////// */
+#Subscribe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffd900;
+    padding: 100px 0;
+}
+#Subscribe form input{
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    color: #19283f;
+    border-bottom: 2px solid white;
+    padding: 10px 10px 10px 10px;
+    width: 600px;
+    outline: none;
+}
+::placeholder{
+    color: #19283f;
+    font-size: 20px;
+}
+#Subscribe button{
+    background-color: #19283f;
+    border: 1px solid transparent;
+}
+#Subscribe button:hover{
+    background-color: transparent;
+    color: #19283f;
+    border: 1px solid white;
+}
+@media (max-width:767px){
+    #Subscribe h2{
+        font-size: 18px;
+    }
+    #Subscribe form input{
+        width: 200px;
+    }
+}
+/* footer//////////////////////////////////////////////////////////////// */
+footer{
+    padding: 100px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #19283f;
+    color: white;
+}
+footer .center-2{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+footer .logo{
+    width: 30%;
+}
+footer .logo h3{
+    margin: 10px 0;
+}
+footer .logo h3 a{
+    color: #33d1cc;
+}
+footer span{
+    color: #33d1cc;
+}
+p{
+    margin: 30px 0;
+    line-height: 30px;
+}
+footer .links{
+    width: 20%;
+    padding-left: 20px;
+}
+footer .about{
+    width: 20%;
+    padding-left: 20px;
+}
+footer ul {
+    list-style: none;
+    font-size: 18px;
+}
+footer ul .li{
+    color: #33d1cc;
+    font-size: 25px;
+    padding: 0 0 10px 0;
+}
+footer ul li{
+    padding: 10px 0;
+}
+footer .contact{
+    width: 30%;
+}
+footer .contact{
+    width: 30%;
+}
+footer .contact h2{
+    color: #33d1cc;
+}
+footer .contact .icon{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+footer .contact .icon i{
+    font-size: 25px;
+    cursor: pointer;
+}
+footer .contact .icon i:hover{
+    color: #ff3150;
+    transform: rotate(10deg);
+}
+@media (max-width:567px){
+    footer .box{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+/* Smali Screens */
+@media (min-width:568px){
+    footer .box{
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    
+
+}
+
+/* Medium Screens */
+@media (min-width:970px){
+    footer .logo{
+        width: 30%;
+    }
+    footer .links{
+        width: 20%;
+        padding-left: 20px;
+    }
+    footer .about{
+        width: 20%;
+        padding-left: 20px;
+    }
+    footer .contact{
+        width: 30%;
+    }
+}
+
+/*large Screens */
+@media (min-width:1100px){
+    #team #center .card{
+        width: calc(25% - 20px);
+    }
+}
